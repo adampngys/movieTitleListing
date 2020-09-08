@@ -3,23 +3,18 @@ import React, { Component } from "react";
 class Movie extends Component {
   constructor() {
     super();
-    let apiURL = "http://numbersapi.com/#";
-    this.showNumber = this.showNumber.bind(this);
+    this.state = { trivia: [] };
   }
   componentDidMount() {
-    const script = document.createElement("script");
-    script.src = "http://numbersapi.com/42/math?callback=showNumber";
-    script.async = true;
-    document.body.appendChild(script);
+    fetch("http://numbersapi.com/random/trivia")
+      .then((res) => res.text())
+      .then((text) =>
+        this.setState({ trivia: this.state.trivia.concat(text) })
+      );
   }
-  showNumber(str) {
-    document.getElementById("number-fact").innerText = str;
-  }
+
   render() {
-    console.log(this.props);
-    console.log(this.props.index);
     const apiURL = "http://numbersapi.com/";
-    console.log(this.apiURL);
     return (
       <div>
         <figure className="figure">
@@ -29,6 +24,7 @@ class Movie extends Component {
           <img
             className="center"
             src={this.props.listing.images["Poster Art"].url}
+            alt={this.props.listing.description}
           />
           <p>
             <b>Description:</b> {this.props.listing.description}
@@ -37,18 +33,7 @@ class Movie extends Component {
             <b>Release Year:</b> {this.props.listing.releaseYear}
           </p>
           <p>
-            <b>Random Fact:</b>{" "}
-            <a href={"http://numbersapi.com/" + this.props.index}>
-              {apiURL}
-              {this.props.index}
-            </a>
-          </p>
-          <p>
-            <span id="number-fact">{this.props.index}</span>
-            {this.showNumber}
-          </p>
-          <p>
-            <script src="http://numbersapi.com/2012/year?write&fragment"></script>
+            <b>Random Fact:</b> {this.state.trivia[0]}
           </p>
         </figure>
       </div>
