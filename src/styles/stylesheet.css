@@ -283,3 +283,48 @@ button:focus,
   padding-bottom: 10px;
   background-color: white;
 }
+.banner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+.text-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+.menu-table {
+  width: 100%;
+  padding-bottom: 2rem;
+  table-layout: fixed;
+}
+td,
+th,
+tr {
+  width: 100%;
+}
+td img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.image {
+  /* Prevent vertical gaps */
+  line-height: 0;
+
+  -webkit-column-count: 1;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 1;
+  -moz-column-gap: 0px;
+  column-count: 1;
+  column-gap: 0px;
+  width: 30%;
+  margin: auto;
+}
+.image img {
+  width: 100% !important;
+  height: auto !important;
+}
+.logo {
+  width: 30%;
+}
