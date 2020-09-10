@@ -1,4 +1,29 @@
+# movieTitleListing
+
+A front end-only React project to display JSON array data and [API](http://numbersapi.com/) payload.<br/>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Project Description
+1. This Single Page Application simulates an online movies/series website.<br/>
+2. The user selects either the Movies or Series category.<br/>
+3. Thereby, the respective artwork images (from image URLs) are loaded onto differentiated image walls.<br/>
+4. a. When the user clicks on any of the images on an image wall, a visual card to display the movie/series item's details (title, image and description) and a random fact.<br/>
+b. This random fact features a random value pulled from [numbersapi API](http://numbersapi.com/).<br/>
+c. Each visual card is also accessible by id, which is the movie/series item's title.<br/>
+5. The landing page will display again when the user clicks on the logo.
+
+## Project Technology
+Dependencies:
+- `react`, `react-dom`, `react-router-dom`
+- `redux`, `react-redux`
+
+Others:<br/>
+- `HTML, CSS`
+
+Recommended Software:<br/>
+- Code: `VS Code`
+- API Test: `Postman`
+- Display: `Chrome with zalmoxisus/redux-devtools-extension`
 
 ## Available Scripts
 
