@@ -7,9 +7,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. This Single Page Application simulates an online movies/series website.<br/>
 2. The user selects either the Movies or Series category.<br/>
 3. Thereby, the respective artwork images (from image URLs) are loaded onto differentiated image walls.<br/>
-4. a. When the user clicks on any of the images on an image wall, a visual card to display the movie/series item's details (title, image and description) and a random fact.<br/>
-b. This random fact features a random value pulled from [numbersapi API](http://numbersapi.com/).<br/>
-c. Each visual card is also accessible by id, which is the movie/series item's title.<br/>
+4. a. When the user clicks on any of the images on an image wall, a visual card displays the movie/series item's details (title, image and description) and a random fact.<br/>
+b. This random fact features a random text string pulled from [numbersapi API](http://numbersapi.com/).<br/>
+c. Each visual card is also accessible by its id, which is the movie/series item's title.<br/>
 5. The landing page will display again when the user clicks on the logo.
 
 ## Project Technology
